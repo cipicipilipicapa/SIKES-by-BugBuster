@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.ReminderPopupController" 
+      styleClass="reminder-popup" spacing="20" alignment="CENTER">
+   <padding>
+      <Insets top="40" right="50" bottom="40" left="50" />
+   </padding>
+   
+   <children>
+      <Label styleClass="popup-title" text="Pengingat !" />
+      
+      <Label styleClass="bell-icon" text="🔔" />
+      
+      <Label styleClass="main-message" text="Waktunya minum obat !!!" />
+      
+      <VBox fx:id="reminderDetailsContainer" styleClass="reminder-details" spacing="5" alignment="CENTER">
+         <!-- Reminder details will be added here dynamically -->
+      </VBox>
+      
+      <Label styleClass="instruction-text" text="Tekan OK jika sudah meminum obat" />
+      
+      <Button fx:id="okButton" onAction="#handleOK" styleClass="ok-button" text="OK" />
+   </children>
+</VBox> 

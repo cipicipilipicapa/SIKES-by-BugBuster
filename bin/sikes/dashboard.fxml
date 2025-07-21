@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.DashboardController">
+   <left>
+      <VBox styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Group%201338.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="menu-title" text="Menu" />
+            <Button styleClass="menu-item-active" text="🏠 Beranda" />
+            <Button onAction="#handleInputData" styleClass="menu-item" text="📋 Input data" />
+            <Button onAction="#handleData" styleClass="menu-item" text="📊 Data" />
+            <Button onAction="#handleArtikel" styleClass="menu-item" text="📰 Artikel" />
+            <Button onAction="#handleKonsultasi" styleClass="menu-item" text="💬 Konsultasi" />
+            <Button onAction="#handlePengingat" styleClass="menu-item" text="🔔 Pengingat" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="menu-item" text="🚪 Log out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+         <content>
+            <VBox styleClass="main-content">
+               <children>
+                  <HBox styleClass="header">
+                     <children>
+                        <TextField promptText="Search" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="notificationButton" onAction="#handleNotificationClick" styleClass="translate-button" text="🔔" />
+                        <HBox styleClass="user-info">
+                           <children>
+                              <Label styleClass="user-avatar" text="👤" />
+                              <Label fx:id="userNameLabel" styleClass="user-name" text="AhmadLuthfan" />
+                              <Button fx:id="editProfileButton" onAction="#handleEditProfile" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 8px; -fx-padding: 4 12; -fx-cursor: hand;" text="Edit Profil" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox styleClass="content-area">
+                     <children>
+                        <VBox styleClass="hero-card-blue">
+                           <children>
+                              <Label styleClass="hero-title-white" text="Selamat datang, pantau kesehatanmu bersama SIKES" />
+                              <Label styleClass="hero-subtitle-white" text="Pantau kesehatan Anda dengan mudah" />
+                           </children>
+                        </VBox>
+                        <HBox styleClass="stats-container">
+                           <children>
+                              <VBox styleClass="stat-card">
+                                 <children>
+                                    <Label styleClass="stat-title" text="Gula darah Terakhir" />
+                                    <Label fx:id="gulaTerakhirValue" styleClass="stat-value" text="135 mg/dL" />
+                                    <Label fx:id="gulaTerakhirStatus" styleClass="stat-status" text="Normal" />
+                                 </children>
+                              </VBox>
+                              <VBox styleClass="stat-card">
+                                 <children>
+                                    <Label styleClass="stat-title" text="Tekanan Darah" />
+                                    <Label fx:id="tekananTerakhirValue" styleClass="stat-value" text="120/80 mmHg" />
+                                    <Label fx:id="tekananTerakhirStatus" styleClass="stat-status" text="Ideal" />
+                                 </children>
+                              </VBox>
+                              <VBox styleClass="stat-card">
+                                 <children>
+                                    <Label styleClass="stat-title" text="Tinggi &amp; Berat Badan" />
+                                    <Label fx:id="tinggiBeratValue" styleClass="stat-value" text="178 cm / 64 kg" />
+                                    <Label fx:id="beratIdealStatus" styleClass="stat-status" text="Ideal" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Label styleClass="section-title" text="Artikel Terbaru" />
+                        <HBox styleClass="articles-container">
+                           <children>
+                              <VBox fx:id="articleCard1" styleClass="article-card">
+                                 <children>
+                                    <ImageView fitHeight="222.0" fitWidth="328.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Rectangle%2020.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="article-title" text="Penyebab Diabetes" />
+                                    <Label styleClass="article-description" text="Diabetes adalah penyakit kronis yang ditandai dengan tingginya kadar gula di dalam darah..." />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaPenyebab" styleClass="read-more-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="articleCard2" styleClass="article-card">
+                                 <children>
+                                    <ImageView fitHeight="221.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/image%2016.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="article-title" text="Makanan untuk Penderita Diabetes" />
+                                    <Label styleClass="article-description" text="Banyak orang menganggap penderita diabetes tidak bisa makan enak. Padahal, ..." />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaMakanan" styleClass="read-more-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="articleCard3" prefHeight="372.0" prefWidth="369.0" styleClass="article-card">
+                                 <children>
+                                    <ImageView fitHeight="214.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Rectangle%2050.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="article-title" text="5 Obat Diabetes di Apotek" />
+                                    <Label styleClass="article-description" text="Obat diabetes di apotek dapat dibeli sesuai resep dari dokter. Selain mampu ..." />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaObat" styleClass="read-more-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

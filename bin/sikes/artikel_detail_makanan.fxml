@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.ArtikelDetailMakananController">
+   <left>
+      <VBox styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Group%201338.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="menu-title" text="Menu" />
+            <Button onAction="#handleBeranda" styleClass="menu-item" text="🏠 Beranda" />
+            <Button onAction="#handleInputData" styleClass="menu-item" text="📋 Input data" />
+            <Button onAction="#handleData" styleClass="menu-item" text="📊 Data" />
+            <Button styleClass="menu-item-active" text="📰 Artikel" />
+            <Button onAction="#handleKonsultasi" styleClass="menu-item" text="💬 Konsultasi" />
+            <Button onAction="#handlePengingat" styleClass="menu-item" text="🔔 Pengingat" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button onAction="#handleLogout" styleClass="menu-item" text="🚪 Log out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <HBox spacing="20">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color:transparent;" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_LEFT" spacing="20" styleClass="main-content">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10" styleClass="header">
+                           <children>
+                              <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 8px; -fx-padding: 8 16; -fx-cursor: hand;" text="← Kembali" />
+                              <TextField promptText="Search" styleClass="search-field" HBox.hgrow="ALWAYS" />
+                              <HBox styleClass="user-info">
+                                 <children>
+                                    <Label styleClass="user-avatar" text="👤" />
+                                    <Label fx:id="userNameLabel" styleClass="user-name" text="Ahmad Luthfan" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label styleClass="artikel-title" style="-fx-font-weight:bold;" text="Makanan untuk Penderita Diabetes" />
+                        <Label styleClass="artikel-description" style="-fx-font-weight:normal;" text="Banyak orang menganggap penderita diabetes tidak bisa makan enak. Padahal, ada beragam makanan yang aman untuk penderita diabetes dan rasanya pun enak. Simak penjelasan lengkapnya di bawah ini." wrapText="true" />
+                        <ImageView fitHeight="280" fitWidth="500" preserveRatio="true">
+                           <image>
+                              <Image url="@images/image%2024.png" />
+                           </image>
+                        </ImageView>
+                        <TextFlow lineSpacing="6" style="-fx-font-size:15px;">
+                          <Text text="Makanan yang Aman untuk Penderita Diabetes" />
+                          <Text text="" />
+                          <Text text="Berikut adalah beberapa makanan yang aman untuk penderita diabetes berdasarkan kandungan gizinya:" />
+                          <Text style="-fx-underline:true;-fx-fill:#1976d2;" text="202 Karbohidrat kompleks" />
+                          <Text text=": Sumber sehat: umbi-umbian (kentang, ubi jalar), buah (tomat, pisang, beri), biji-bijian utuh (beras merah, oat), legum (petai cina, kacang polong), produk gandum utuh (roti gandum). Kurangi karbohidrat rafinasi seperti roti putih dan nasi putih." />
+                          <Text style="-fx-underline:true;-fx-fill:#1976d2;" text="202 Makanan kaya serat" />
+                          <Text text=": Buah (pepaya, apel, pir), sayur (bayam, brokoli, selada), kacang (tanah, chestnut, almond), biji-bijian (artichoke, chia seed, biji romi)." />
+                          <Text style="-fx-underline:true;-fx-fill:#1976d2;" text="202 Protein sehat" />
+                          <Text text=": Protein hewani (daging sapi has dalam/paha belakang, dada ayam tanpa kulit, ikan berdaging putih, telur), protein nabati (kacang merah, kacang hitam, kacang polong, edamame, tahu)." />
+                          <Text style="-fx-underline:true;-fx-fill:#1976d2;" text="202 Vitamin, mineral, dan antioksidan" />
+                          <Text text=": Sayuran hijau (vitamin A, C, E, K, kalsium, seng, potassium), stroberi (vitamin C, antioksidan), buah sitrus (serat, vitamin C, folat, potassium), buah beri (vitamin C, K, mangan, serat, potassium)." />
+                          <Text text="" />
+                          <Text text="Dikutip oleh: dr. Kevin Adrian" />
+                          <Text style="-fx-fill:#1976d2;-fx-underline:true;" text="https://www.alodokter.com/pilihan-makanan-yang-aman-untuk-penderita-diabetes" />
+                        </TextFlow>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox alignment="TOP_LEFT" maxWidth="300" minWidth="250" spacing="15" styleClass="artikel-terkait-panel">
+               <children>
+                  <Label style="-fx-font-size:20px;-fx-font-weight:bold;" text="Artikel Terkait" />
+                  <VBox spacing="10">
+                     <children>
+                        <Label styleClass="artikel-terkait-title" style="-fx-font-weight:bold;" text="Penyebab diabetes" />
+                        <ImageView fx:id="imgTerkaitPenyebab" fitHeight="154.0" fitWidth="233.0" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Rectangle%2020.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="descTerkaitPenyebab" styleClass="artikel-description" text="Penyebab utama dan risiko diabetes." wrapText="true" />
+                        <Button onAction="#handleBacaSelengkapnyaPenyebab" style="-fx-background-color: transparent; -fx-text-fill: #1976d2; -fx-font-size: 12px; -fx-underline: true; -fx-cursor: hand; -fx-padding: 4 0;" text="Baca Selengkapnya" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="10">
+                     <children>
+                        <Label styleClass="artikel-terkait-title" style="-fx-font-weight:bold;" text="5 Obat Diabetes di Apotek" />
+                        <ImageView fx:id="imgTerkaitObat" fitHeight="153.0" fitWidth="228.0" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Rectangle%2050.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="descTerkaitObat" styleClass="artikel-description" text="Obat diabetes yang umum tersedia di apotek." wrapText="true" />
+                        <Button onAction="#handleBacaSelengkapnyaObat" style="-fx-background-color: transparent; -fx-text-fill: #1976d2; -fx-font-size: 12px; -fx-underline: true; -fx-cursor: hand; -fx-padding: 4 0;" text="Baca Selengkapnya" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

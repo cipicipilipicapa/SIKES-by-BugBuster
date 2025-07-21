@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+
+<HBox prefHeight="582.0" prefWidth="655.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.RegisterController">
+   <children>
+      <VBox styleClass="left-panel" HBox.hgrow="ALWAYS">
+         <children>
+            <!-- Logo dan nama aplikasi di pojok kiri atas -->
+            <HBox alignment="TOP_LEFT" styleClass="logo-container">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Group%201338.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            
+            <!-- Ilustrasi di tengah -->
+            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="319.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Dokter.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="564.0" prefWidth="426.0" styleClass="right-panel" HBox.hgrow="ALWAYS">
+         <children>
+            <Label styleClass="welcome-title" text="Selamat datang" />
+            <Label styleClass="welcome-subtitle" text="Register your account" />
+            <VBox fx:id="formContainer" spacing="10" styleClass="form-container">
+               <children>
+                  <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" />
+                  <TextField fx:id="emailField" promptText="Email" styleClass="input-field" />
+                  <TextField fx:id="phoneField" promptText="Nomor Telepon" styleClass="input-field" />
+                  <DatePicker fx:id="tanggalLahirPicker" promptText="Tanggal Lahir" styleClass="input-field" />
+                  <VBox spacing="5" alignment="CENTER_LEFT" styleClass="input-field" fx:id="golonganDarahBox">
+                    <children>
+                      <Label text="Golongan Darah" style="-fx-text-fill: #666; -fx-font-size: 14px; -fx-padding: 0 0 5 0; -fx-opacity: 0.6;" />
+                      <HBox spacing="20" alignment="CENTER_LEFT">
+                        <children>
+                          <RadioButton fx:id="golA" text="A" />
+                          <RadioButton fx:id="golB" text="B" />
+                          <RadioButton fx:id="golAB" text="AB" />
+                          <RadioButton fx:id="golO" text="O" />
+                        </children>
+                      </HBox>
+                    </children>
+                  </VBox>
+                  <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" />
+                  <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" styleClass="input-field" />
+                  <Button fx:id="signInButton" onAction="#handleSignIn" styleClass="signin-button" text="Sign Up" />
+                  <Button fx:id="alreadyAccountButton" onAction="#handleAlreadyAccount" styleClass="link-button" text="Already have an account" />
+                  <Label fx:id="errorLabel" styleClass="error-label" text="" visible="false" />
+               </children>
+             </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

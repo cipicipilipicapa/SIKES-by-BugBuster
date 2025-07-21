@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.LoginController">
+   <children>
+      <VBox styleClass="left-panel" HBox.hgrow="ALWAYS">
+         <children>
+            <!-- Logo dan nama aplikasi di pojok kiri atas -->
+            <HBox alignment="TOP_LEFT" styleClass="logo-container">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Group%201338.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            
+            <!-- Ilustrasi di tengah -->
+            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="319.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/illustration.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="621.0" prefWidth="498.0" styleClass="right-panel" HBox.hgrow="ALWAYS">
+         <children>
+            <Label styleClass="welcome-title" text="Selamat datang" />
+            <Label styleClass="welcome-subtitle" text="Login your account" />
+            <VBox styleClass="form-container">
+               <children>
+                  <TextField fx:id="usernameField" promptText="Username" styleClass="input-field" />
+                  <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field" />
+                  <Button fx:id="forgotPasswordButton" onAction="#handleForgotPassword" styleClass="forgot-password-button" text="Lupa Kata Sandi ?" />
+                  <Button fx:id="signInButton" onAction="#handleSignIn" styleClass="signin-button" text="Login" />
+                  <Label fx:id="errorLabel" styleClass="error-label" text="" visible="false" />
+                  <Button fx:id="createAccountButton" onAction="#handleCreateAccount" styleClass="link-button" text="Create new account" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.TambahPengingatController" 
+      styleClass="add-reminder-dialog" spacing="20" alignment="CENTER">
+   <padding>
+      <Insets top="30" right="40" bottom="30" left="40" />
+   </padding>
+   
+   <children>
+      <Label styleClass="dialog-title" text="Tambah Pengingat" />
+      
+      <VBox spacing="15" styleClass="form-container">
+         <children>
+            <VBox spacing="5">
+               <children>
+                  <Label styleClass="form-label" text="Nama Obat" />
+                  <TextField fx:id="namaObatField" styleClass="form-field" promptText="Masukkan nama obat" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="5">
+               <children>
+                  <Label styleClass="form-label" text="Frekuensi" />
+                  <TextField fx:id="frekuensiField" styleClass="form-field" promptText="Masukkan frekuensi meminum obat" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="5">
+               <children>
+                  <Label styleClass="form-label" text="Waktu Pengingat" />
+                  <HBox spacing="10" alignment="CENTER_LEFT">
+                     <children>
+                        <TextField fx:id="jamField" styleClass="time-field" promptText="HH" maxWidth="60" />
+                        <Label text=":" styleClass="time-separator" />
+                        <TextField fx:id="menitField" styleClass="time-field" promptText="MM" maxWidth="60" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            
+            <VBox spacing="5">
+               <children>
+                  <Label styleClass="form-label" text="Catatan" />
+                  <TextArea fx:id="catatanField" styleClass="form-field" promptText="Masukkan catatan (opsional)" prefRowCount="3" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      
+      <HBox spacing="15" alignment="CENTER">
+         <children>
+            <Button fx:id="cancelButton" onAction="#handleCancel" styleClass="cancel-button" text="Batal" />
+            <Button fx:id="saveButton" onAction="#handleSave" styleClass="save-button" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</VBox> 

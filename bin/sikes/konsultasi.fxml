@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.KonsultasiController">
+   <left>
+      <VBox styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Group%201338.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="menu-title" text="Menu" />
+            <Button fx:id="berandaButton" onAction="#handleBeranda" styleClass="menu-item" text="🏠 Beranda" />
+            <Button fx:id="inputDataButton" onAction="#handleInputData" styleClass="menu-item" text="📋 Input data" />
+            <Button fx:id="dataButton" onAction="#handleData" styleClass="menu-item" text="📊 Data" />
+            <Button fx:id="artikelButton" onAction="#handleArtikel" styleClass="menu-item" text="📰 Artikel" />
+            <Button styleClass="menu-item-active" text="💬 Konsultasi" />
+            <Button fx:id="pengingatButton" onAction="#handlePengingat" styleClass="menu-item" text="🔔 Pengingat" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="menu-item" text="🚪 Log out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox styleClass="main-content">
+         <children>
+            <HBox styleClass="header">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="notificationButton" onAction="#handleNotificationClick" styleClass="translate-button" text="🔔" />
+                  <HBox styleClass="user-info">
+                     <children>
+                        <Label styleClass="user-avatar" text="👤" />
+                        <Label fx:id="userNameLabel" styleClass="user-name" text="Ahmad Luthfan" />
+                        <Button fx:id="editProfileButton" onAction="#handleEditProfile" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 8px; -fx-padding: 4 12; -fx-cursor: hand;" text="Edit Profil" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox styleClass="content-area">
+               <children>
+                  <HBox spacing="20" styleClass="konsultasi-container">
+                     <children>
+                        <!-- Daftar Dokter -->
+                        <VBox spacing="15" styleClass="dokter-list-section">
+                           <children>
+                              <Label styleClass="section-title" text="Dokter Tersedia" />
+                              <TextField fx:id="searchDokterField" promptText="Cari dokter..." styleClass="search-field" />
+                              <ListView fx:id="dokterListView" styleClass="dokter-list-view" />
+                           </children>
+                        </VBox>
+                        
+                        <!-- Area Chat -->
+                        <VBox spacing="15" styleClass="chat-section">
+                           <children>
+                              <HBox styleClass="chat-header">
+                                 <children>
+                                    <Label fx:id="dokterNameLabel" styleClass="dokter-name" text="Pilih dokter untuk memulai konsultasi" />
+                                    <Label fx:id="dokterStatusLabel" styleClass="dokter-status" text="" />
+                                 </children>
+                              </HBox>
+                              <ScrollPane styleClass="chat-messages-scroll">
+                                 <content>
+                                    <VBox fx:id="chatMessagesContainer" styleClass="chat-messages-container" />
+                                 </content>
+                              </ScrollPane>
+                              <HBox spacing="10">
+                                 <children>
+                                    <TextField fx:id="messageField" onAction="#handleSendMessage" promptText="Ketik pesan..." styleClass="input-field" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="sendButton" onAction="#handleSendMessage" styleClass="send-button" text="Kirim" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
