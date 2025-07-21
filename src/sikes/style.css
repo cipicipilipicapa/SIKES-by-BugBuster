@@ -1,0 +1,1265 @@
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Left Panel - Auth pages */
+.left-panel {
+    -fx-background-color: linear-gradient(to right, #8ec5fc 0%, #3f5efb 100%);
+    -fx-pref-width: 500px;
+    -fx-alignment: top-center;
+    -fx-padding: 30px;
+}
+
+.logo-container {
+    -fx-alignment: top-left;
+    -fx-spacing: 10px;
+    -fx-padding: 0 0 20px 0;
+}
+
+.app-name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+}
+
+.logo {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 30px 0;
+}
+
+.illustration-text {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+/* Right Panel - Auth pages */
+.right-panel {
+    -fx-background-color: white;
+    -fx-pref-width: 500px;
+    -fx-alignment: center;
+    -fx-padding: 50px;
+}
+
+.welcome-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 0 0 10px 0;
+}
+
+.welcome-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #666;
+    -fx-padding: 0 0 40px 0;
+}
+
+.form-container {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-pref-width: 400px;
+}
+
+.input-field {
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+}
+
+.input-field:focused {
+    -fx-border-color: #667eea;
+    -fx-border-width: 2px;
+}
+
+/* Ensure DatePicker and ComboBox match other input fields */
+.input-field {
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+}
+
+.input-field .date-picker-display-node {
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+}
+
+.input-field .arrow-button {
+    -fx-background-color: transparent;
+    -fx-min-width: 30px;
+    -fx-max-width: 30px;
+}
+
+.input-field .arrow {
+    -fx-background-color: #666;
+}
+
+/* ComboBox styling to match input fields */
+.input-field .list-cell {
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+}
+
+/* Ensure ComboBox popup list maintains consistent width */
+.input-field .list-view {
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+}
+
+.input-field .list-view .list-cell {
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+}
+
+.input-field .list-view .list-cell:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.input-field .list-view .list-cell:selected {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+}
+
+.signin-button {
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.signin-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.link-button:hover {
+    -fx-text-fill: #5a6fd8;
+}
+
+.forgot-password-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-alignment: center-right;
+}
+
+.error-label {
+    -fx-text-fill: #dc3545;
+    -fx-font-size: 14px;
+}
+
+/* Dashboard Styles */
+.sidebar {
+    -fx-background-color: white;
+    -fx-pref-width: 250px;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.sidebar-logo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #667eea;
+    -fx-padding: 0 0 30px 0;
+}
+
+.menu-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #999;
+    -fx-font-weight: bold;
+    -fx-padding: 20px 0 10px 0;
+}
+
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #666;
+    -fx-alignment: center-left;
+    -fx-pref-width: 210px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.menu-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+.menu-item-active {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-pref-width: 210px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+}
+
+.main-content {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 0;
+}
+
+.header {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-spacing: 20px;
+    -fx-alignment: center-left;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.search-field {
+    -fx-pref-height: 40px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 0 15px;
+}
+
+.translate-button {
+    -fx-background-color: #f8f9fa;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+
+.user-info {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+    -fx-background-color: #667eea;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 20px;
+}
+
+.user-avatar {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.user-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.content-area {
+    -fx-padding: 30px;
+    -fx-spacing: 30px;
+}
+
+.hero-card-blue {
+    -fx-background-color: #667eea;
+    -fx-padding: 40px;
+    -fx-background-radius: 15px;
+    -fx-spacing: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.hero-title-white {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+}
+
+.hero-subtitle-white {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.stats-container {
+    -fx-spacing: 20px;
+}
+
+.stat-card {
+    -fx-background-color: white;
+    -fx-padding: 25px;
+    -fx-background-radius: 15px;
+    -fx-spacing: 10px;
+    -fx-pref-width: 350px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+.stat-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.stat-status {
+    -fx-font-size: 12px;
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 0 0 15px 0;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.articles-container {
+    -fx-spacing: 20px;
+}
+
+.article-card {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 15px;
+    -fx-spacing: 15px;
+    -fx-pref-width: 350px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.article-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.article-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+    -fx-wrap-text: true;
+}
+
+.read-more-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+}
+
+.read-more-button:hover {
+    -fx-text-fill: #5a6fd8;
+}
+
+/* Input Data Page Specific Styles */
+.input-form-container {
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-pref-width: 900px;
+}
+
+.form-group {
+    -fx-spacing: 5px;
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+.riwayat-container {
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-pref-width: 630px;
+}
+
+.riwayat-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 3px 0;
+}
+
+/* Artikel Page Styles */
+.artikel-container {
+    -fx-spacing: 20px;
+    -fx-padding: 10px;
+}
+
+.artikel-item {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-background-radius: 15px;
+    -fx-spacing: 20px;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-pref-width: 900px;
+}
+
+.artikel-item:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 3);
+}
+
+.artikel-image-container {
+    -fx-pref-width: 150px;
+    -fx-pref-height: 120px;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10px;
+    -fx-alignment: center;
+}
+
+.artikel-image-placeholder {
+    -fx-font-size: 48px;
+    -fx-text-fill: #667eea;
+}
+
+.artikel-content {
+    -fx-spacing: 12px;
+    -fx-alignment: top-left;
+}
+
+.artikel-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 0 0 5px 0;
+}
+
+.artikel-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 2px;
+    -fx-padding: 0 0 10px 0;
+}
+
+.baca-selengkapnya-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+}
+
+.baca-selengkapnya-button:hover {
+    -fx-text-fill: #5a6fd8;
+    -fx-underline: true;
+}
+
+.riwayat-container {
+    -fx-spacing: 8px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-pref-width: 900px;
+}
+
+.history-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 3px 0;
+}
+
+/* Add these styles to your existing style.css */
+
+.input-history-container {
+    -fx-padding: 0 20px 20px 20px;
+}
+
+.input-form-section {
+    -fx-pref-width: 500px;
+}
+
+.history-section {
+    -fx-pref-width: 650px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.input-form-container {
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.riwayat-container {
+    -fx-spacing: 10px;
+}
+
+.riwayat-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 3px 0;
+}
+
+/* Data Page Styles */
+.chart-container {
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-spacing: 15px;
+    -fx-margin: 0 0 20px 0;
+}
+
+.chart-row {
+    -fx-spacing: 20px;
+}
+
+.chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.data-chart {
+    -fx-pref-height: 300px;
+}
+
+.bar-legend-symbol {
+    -fx-background-color: #667eea;
+}
+
+.pie-legend-symbol {
+    -fx-background-color: #667eea;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #667eea;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #5a6fd8;
+}
+
+.default-color0.chart-pie {
+    -fx-pie-color: #667eea;
+}
+
+.default-color1.chart-pie {
+    -fx-pie-color: #5a6fd8;
+}
+
+.default-color2.chart-pie {
+    -fx-pie-color: #4a5ec7;
+}
+
+.default-color0.chart-series-line {
+    -fx-stroke: #667eea;
+    -fx-stroke-width: 2px;
+}
+
+.default-color1.chart-series-line {
+    -fx-stroke: #5a6fd8;
+    -fx-stroke-width: 2px;
+}
+
+.default-color0.chart-line-symbol {
+    -fx-background-color: #667eea, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.default-color1.chart-line-symbol {
+    -fx-background-color: #5a6fd8, white;
+    -fx-background-insets: 0, 2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Personal Info Styles */
+.personal-info-container {
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-spacing: 15px;
+    -fx-margin: 0 0 20px 0;
+}
+
+.greeting-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #666;
+}
+
+.name-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.stats-grid {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.stat-item {
+    -fx-alignment: center;
+    -fx-spacing: 5px;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #667eea;
+}
+
+.stat-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+/* Gula Darah Details */
+.gula-details {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-padding: 10px 0 0 0;
+}
+
+.gula-percentage {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #667eea;
+}
+
+.gula-values {
+    -fx-alignment: center-left;
+    -fx-spacing: 2px;
+}
+
+.gula-unit {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+.gula-range {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Tekanan Darah Value */
+.tekanan-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #667eea;
+    -fx-padding: 10px 0 0 0;
+}
+
+/* Konsultasi Page Styles */
+.konsultasi-container {
+    -fx-padding: 20px;
+}
+
+.dokter-list-section {
+    -fx-pref-width: 300px;
+    -fx-padding: 15px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.dokter-list-view {
+    -fx-pref-height: 600px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.dokter-list-view .list-cell {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.dokter-list-view .list-cell:filled:hover {
+    -fx-background-color: #f8f9fa;
+    -fx-cursor: hand;
+}
+
+.dokter-list-view .list-cell:filled:selected {
+    -fx-background-color: #e6f0ff;
+}
+
+.chat-section {
+    -fx-pref-width: 600px;
+    -fx-padding: 15px;
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.chat-header {
+    -fx-padding: 10px;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 0 1px 0;
+    -fx-spacing: 10px;
+}
+
+.dokter-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.dokter-status {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Perbaikan style untuk chat */
+.chat-messages-scroll {
+    -fx-pref-height: 500px;
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: as-needed;
+    -fx-fit-to-width: true;
+}
+
+.chat-messages-container {
+    -fx-spacing: 10px;
+    -fx-padding: 5px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+/* Style untuk tombol kirim */
+.send-button {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 80px;
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+}
+
+.send-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+.send-button:disabled {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: #666666;
+    -fx-cursor: default;
+}
+
+/* Reminder Page Styles */
+.reminder-header {
+    -fx-padding: 20px 0;
+    -fx-alignment: center-left;
+}
+
+.add-reminder-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.add-reminder-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+.reminder-list-container {
+    -fx-spacing: 15px;
+    -fx-padding: 10px 0;
+}
+
+/* Add Reminder Dialog Styles */
+.add-reminder-dialog {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 5);
+    -fx-min-width: 400px;
+    -fx-max-width: 500px;
+}
+
+.dialog-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+}
+
+.form-container {
+    -fx-spacing: 15px;
+}
+
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.form-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 14px;
+}
+
+.form-field:focused {
+    -fx-border-color: #667eea;
+    -fx-background-color: white;
+}
+
+.time-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+}
+
+.time-field:focused {
+    -fx-border-color: #667eea;
+    -fx-background-color: white;
+}
+
+.time-separator {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.cancel-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #5a6268;
+}
+
+.save-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.save-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+/* Reminder Popup Styles */
+.reminder-popup {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 30, 0, 0, 10);
+    -fx-min-width: 450px;
+    -fx-max-width: 550px;
+    -fx-alignment: center;
+}
+
+.popup-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+}
+
+.bell-icon {
+    -fx-font-size: 48px;
+    -fx-alignment: center;
+}
+
+.main-message {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+}
+
+.reminder-details {
+    -fx-padding: 10px 0;
+    -fx-alignment: center;
+}
+
+.instruction-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+    -fx-alignment: center;
+}
+
+.ok-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25px;
+    -fx-padding: 12px 40px;
+    -fx-cursor: hand;
+    -fx-min-width: 120px;
+}
+
+.ok-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+/* Notification Popup Styles */
+.notification-popup {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 500px;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.notification-header {
+    -fx-background-color: #667eea;
+    -fx-padding: 15px;
+    -fx-alignment: center-left;
+    -fx-border-radius: 8px 8px 0 0;
+    -fx-background-radius: 8px 8px 0 0;
+}
+
+.notification-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.close-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-pref-width: 24px;
+    -fx-pref-height: 24px;
+    -fx-background-radius: 12px;
+}
+
+.close-button:hover {
+    -fx-background-color: rgba(255,255,255,0.2);
+}
+
+.close-notification-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #666;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 2 6;
+    -fx-background-radius: 3;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+}
+
+.close-notification-button:hover {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.notification-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 15px;
+    -fx-fit-to-width: true;
+}
+
+.notification-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.notification-list {
+    -fx-spacing: 10px;
+    -fx-padding: 0;
+}
+
+.notification-item {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-spacing: 8px;
+}
+
+.notification-item:hover {
+    -fx-background-color: #e9ecef;
+    -fx-cursor: hand;
+}
+
+.notification-item-header {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.doctor-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.notification-time {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666;
+}
+
+.notification-message {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 2px;
+}
+
+.view-reply-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+}
+
+.view-reply-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+.notification-footer {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 15px;
+    -fx-alignment: center-left;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1px 0 0 0;
+    -fx-border-radius: 0 0 8px 8px;
+    -fx-background-radius: 0 0 8px 8px;
+}
+
+.mark-all-read-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-font-size: 12px;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.mark-all-read-button:hover {
+    -fx-text-fill: #5a6fd8;
+}
+
+.view-all-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 12px;
+    -fx-cursor: hand;
+}
+
+.view-all-button:hover {
+    -fx-background-color: #5a6fd8;
+}
+
+.empty-notification {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-padding: 40px 20px;
+}
+
+.empty-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666;
+}
+
+.empty-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #999;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.empty-artikel {
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+    -fx-padding: 60px 20px;
+}
+
+.empty-artikel-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666;
+}
+
+.empty-artikel-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #999;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+/* Golongan darah radio button group styling for register */
+#golonganDarahBox {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 15 15 15 15; /* padding atas kanan bawah kiri, sebelumnya 0 15px */
+    -fx-min-width: 400px;
+    -fx-max-width: 400px;
+    -fx-min-height: 70px; /* lebih tinggi dari sebelumnya */
+    -fx-max-height: 90px;
+    -fx-alignment: center-left;
+}
+#golonganDarahBox .radio-button {
+    -fx-font-size: 14px;
+    -fx-padding: 0 10px 0 0;
+    -fx-opacity: 0.6;
+}
+#golonganDarahBox .radio-button:selected {
+    -fx-text-fill: #667eea;
+    -fx-font-weight: bold;
+    -fx-opacity: 1.0;
+}
+#golonganDarahBox .radio {
+    -fx-background-color: white;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+#golonganDarahBox .radio-button:selected {
+    -fx-text-fill: #667eea;
+    -fx-font-weight: bold;
+}
+
+/* Pop up container */
+.popup-notification {
+    -fx-background-color: #fff;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #bdbdbd, 10, 0.2, 0, 2);
+    -fx-padding: 16;
+}
+
+/* Judul */
+.popup-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Isi notifikasi */
+.popup-message {
+    -fx-font-size: 14px;
+    -fx-text-fill: #444;
+    -fx-padding: 4 0 12 0;
+}
+
+/* Tombol */
+.popup-button {
+    -fx-background-color: #e3e8ff;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-text-fill: #3a4ca8;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 6 18 6 18;
+}
+.popup-button:hover {
+    -fx-background-color: #c7d2fe;
+}
+
+.logout-button {
+    -fx-background-color: #e53935;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 0;
+    -fx-cursor: hand;
+    -fx-margin: 0 0 8px 0;
+}
+.logout-button:hover {
+    -fx-background-color: #b71c1c;
+}

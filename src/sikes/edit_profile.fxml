@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.EditProfileController" alignment="CENTER" spacing="18" style="-fx-background-color: white; -fx-padding: 32;">
+    <children>
+        <Label text="Ubah Nama &amp; Nomor Telepon" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #222;" />
+        <Label text="Edit data profil Anda di bawah ini" style="-fx-font-size: 14px; -fx-text-fill: #888;" />
+        <TextField fx:id="nameField" promptText="Nama Lengkap" styleClass="input-field" />
+        <TextField fx:id="phoneField" promptText="Nomor Telepon" styleClass="input-field" />
+        <Button fx:id="saveButton" text="Simpan perubahan" styleClass="signin-button" onAction="#handleSave" />
+        <Label fx:id="errorLabel" text="" style="-fx-text-fill: red; -fx-font-size: 13px;" visible="false" />
+        <Button text="Tutup" styleClass="link-button" onAction="#handleBack" />
+    </children>
+</VBox> 

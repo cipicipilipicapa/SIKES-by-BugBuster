@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.PengingatController">
+   <left>
+      <VBox styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Group%201338.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="menu-title" text="Menu" />
+            <Button onAction="#handleBeranda" styleClass="menu-item" text="🏠 Beranda" />
+            <Button onAction="#handleInputData" styleClass="menu-item" text="📋 Input data" />
+            <Button onAction="#handleData" styleClass="menu-item" text="📊 Data" />
+            <Button onAction="#handleArtikel" styleClass="menu-item" text="📰 Artikel" />
+            <Button onAction="#handleKonsultasi" styleClass="menu-item" text="💬 Konsultasi" />
+            <Button styleClass="menu-item-active" text="🔔 Pengingat" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="menu-item" text="🚪 Log out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <ScrollPane fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+         <content>
+            <VBox styleClass="main-content">
+               <children>
+                  <HBox styleClass="header">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button fx:id="notificationButton" onAction="#handleNotificationClick" styleClass="translate-button" text="🔔" />
+                        <HBox styleClass="user-info">
+                           <children>
+                              <Label styleClass="user-avatar" text="👤" />
+                              <Label fx:id="userNameLabel" styleClass="user-name" text="AhmadLuthfan" />
+                              <Button fx:id="editProfileButton" onAction="#handleEditProfile" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 8px; -fx-padding: 4 12; -fx-cursor: hand;" text="Edit Profil" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox styleClass="content-area">
+                     <children>
+                        <HBox styleClass="reminder-header">
+                           <children>
+                              <Label styleClass="section-title" text="Daftar Pengingat" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="addReminderButton" onAction="#handleAddReminder" styleClass="add-reminder-button" text="Tambahkan Jadwal" />
+                           </children>
+                        </HBox>
+                        <VBox fx:id="reminderListContainer" styleClass="reminder-list-container">
+                           <!-- Reminder items will be added here dynamically -->
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

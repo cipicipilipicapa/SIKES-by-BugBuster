@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TreeView?>
+
+<BorderPane stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sikes.ArtikelController">
+   <left>
+      <VBox styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Group%201338.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="menu-title" text="Menu" />
+            <Button fx:id="berandaButton" onAction="#handleBeranda" styleClass="menu-item" text="🏠 Beranda" />
+            <Button fx:id="inputDataButton" onAction="#handleInputData" styleClass="menu-item" text="📋 Input data" />
+            <Button fx:id="dataButton" onAction="#handleData" styleClass="menu-item" text="📊 Data" />
+            <Button styleClass="menu-item-active" text="📰 Artikel" />
+            <Button fx:id="konsultasiButton" onAction="#handleKonsultasi" styleClass="menu-item" text="💬 Konsultasi" />
+            <Button fx:id="pengingatButton" onAction="#handlePengingat" styleClass="menu-item" text="🔔 Pengingat" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="logoutButton" onAction="#handleLogout" styleClass="menu-item" text="🚪 Log out" />
+            <TreeView fx:id="kategoriTree" minHeight="120" maxHeight="200" style="-fx-background-radius: 8; -fx-background-color: #f8f9fa; -fx-padding: 8 0 8 0;">
+                <!-- TreeView akan diisi dari controller -->
+            </TreeView>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox styleClass="main-content">
+         <children>
+            <HBox styleClass="header">
+               <children>
+                  <TextField fx:id="searchField" promptText="Search artikel..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="notificationButton" onAction="#handleNotificationClick" styleClass="translate-button" text="🔔" />
+                  <HBox styleClass="user-info">
+                     <children>
+                        <Label styleClass="user-avatar" text="👤" />
+                        <Label fx:id="userNameLabel" styleClass="user-name" text="Rangga Bhima" />
+                        <Button fx:id="editProfileButton" onAction="#handleEditProfile" style="-fx-background-color: #667eea; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 8px; -fx-padding: 4 12; -fx-cursor: hand;" text="Edit Profil" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox styleClass="content-area">
+               <children>
+                  <VBox fx:id="artikelContainer" styleClass="artikel-container">
+                     <children>
+                        <!-- Artikel 1 - Penyebab Diabetes -->
+                        <HBox fx:id="artikelItem1" styleClass="artikel-item">
+                           <children>
+                              <VBox styleClass="artikel-image-container">
+                                 <children>
+                                    <ImageView fitHeight="175.0" fitWidth="307.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Rectangle%2020.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox styleClass="artikel-content" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="artikel-title" text="Penyebab Diabetes" />
+                                    <Label styleClass="artikel-description" text="Diabetes adalah penyakit kronis yang ditandai dengan tingginya kadar gula di dalam darah. Glukosa atau gula adalah sumber energi utama bagi tubuh. Namun, pada penderita diabetes, glukosa tidak dapat digunakan oleh tubuh dengan efektif.\n" />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaPenyebab" styleClass="baca-selengkapnya-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <!-- Artikel 2 - Makanan untuk Penderita Diabetes -->
+                        <HBox fx:id="artikelItem2" styleClass="artikel-item">
+                           <children>
+                              <VBox styleClass="artikel-image-container">
+                                 <children>
+                                    <ImageView fitHeight="170.0" fitWidth="295.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/image%2016.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox styleClass="artikel-content" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="artikel-title" text="Makanan untuk Penderita Diabetes" />
+                                    <Label styleClass="artikel-description" text="Banyak orang menganggap penderita diabetes tidak bisa makan enak. Padahal, ada beragam makanan yang aman untuk penderita diabetes dan rasanya pun enak. Simak penjelasan lengkapnya di bawah ini." />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaMakanan" styleClass="baca-selengkapnya-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <!-- Artikel 3 - 5 Obat Diabetes di Apotek -->
+                        <HBox fx:id="artikelItem3" styleClass="artikel-item">
+                           <children>
+                              <VBox styleClass="artikel-image-container">
+                                 <children>
+                                    <ImageView fitHeight="172.0" fitWidth="267.0" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Rectangle%2050.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                              <VBox styleClass="artikel-content" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label styleClass="artikel-title" text="5 Obat Diabetes di Apotek" />
+                                    <Label styleClass="artikel-description" text="Obat diabetes di apotek dapat dibeli sesuai resep dari dokter. Selain mampu menurunkan kadar gula darah, obat ini juga dapat mencegah terjadinya komplikasi, khususnya pada penderita diabetes tipe 2." />
+                                    <Hyperlink onAction="#handleBacaSelengkapnyaObat" styleClass="baca-selengkapnya-button" text="Baca Selengkapnya" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        
+                        <!-- Empty state when no articles found -->
+                        <VBox fx:id="emptyState" styleClass="empty-artikel" visible="false">
+                           <children>
+                              <Label styleClass="empty-artikel-title" text="Tidak ada artikel ditemukan" />
+                              <Label styleClass="empty-artikel-message" text="Coba kata kunci lain atau periksa ejaan" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
