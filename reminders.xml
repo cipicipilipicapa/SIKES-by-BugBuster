@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reminders>
+  <reminder>
+    <id>b4ecdd69-e440-466b-b8f1-8c272f341dea</id>
+    <username>Faiz</username>
+    <namaObat>pacecetamol</namaObat>
+    <frekuensi>3x4</frekuensi>
+    <waktu>12:30</waktu>
+    <catatan>123</catatan>
+    <active>true</active>
+  </reminder>
+  <reminder>
+    <id>336fb4c0-9740-4bf5-875e-4a0dcc8bf45b</id>
+    <username>PaijoAsik</username>
+    <namaObat>erer</namaObat>
+    <frekuensi>3x1</frekuensi>
+    <waktu>16:50</waktu>
+    <catatan></catatan>
+    <active>true</active>
+  </reminder>
+  <reminder>
+    <id>39ca25f4-02e2-4765-b366-48a5763570ec</id>
+    <username>Janu</username>
+    <namaObat>metformin</namaObat>
+    <frekuensi>3x1</frekuensi>
+    <waktu>15:00</waktu>
+    <catatan>Minum setelah makan</catatan>
+    <active>true</active>
+  </reminder>
+  <reminder>
+    <id>afca9a8a-5006-46e6-bebe-debecff6df81</id>
+    <username>PaijoAsik</username>
+    <namaObat>asas</namaObat>
+    <frekuensi>2x1</frekuensi>
+    <waktu>13:54</waktu>
+    <catatan>123</catatan>
+    <active>true</active>
+  </reminder>
+  <reminder>
+    <id>7780f539-d3d4-47b3-aab6-1922fdf91125</id>
+    <username>PaijoAsik</username>
+    <namaObat>dede</namaObat>
+    <frekuensi>4x1</frekuensi>
+    <waktu>14:11</waktu>
+    <catatan>12</catatan>
+    <active>true</active>
+  </reminder>
+</reminders>

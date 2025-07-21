@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><users>
+    <user>
+        <username>Janu</username>
+        <password>123</password>
+        <email>Luqman@gmail.com</email>
+        <phone>088802794736</phone>
+        <tanggalLahir>2005-09-04</tanggalLahir>
+        <golonganDarah>B</golonganDarah>
+    </user>
+    <user>
+        <username>Luqman</username>
+        <password>123</password>
+        <email>hakim@gmail.com</email>
+        <phone>088802794736</phone>
+        <tanggalLahir>2005-07-04</tanggalLahir>
+        <golonganDarah>B</golonganDarah>
+    </user>
+    <user>
+        <username>PaijoAsik</username>
+        <password>1234</password>
+        <email>paijo@gmail.com</email>
+        <phone>085229093762</phone>
+        <tanggalLahir>2005-07-08</tanggalLahir>
+        <golonganDarah>B</golonganDarah>
+    </user>
+<user><username>arazi</username><password>1234</password><email>arazi@gmail.com</email><phone>088888888</phone><tanggalLahir>2010-07-06</tanggalLahir><golonganDarah>AB</golonganDarah></user><user><username>Faiz</username><password>1234</password><email>faiz@gmail.com</email><phone>0892347236</phone><tanggalLahir>2010-07-09</tanggalLahir><golonganDarah>A</golonganDarah></user><user><username>Fufufafa</username><password>1234</password><email>fufufafa@gmail.com</email><phone>0823184782</phone><tanggalLahir>1999-07-07</tanggalLahir><golonganDarah>A</golonganDarah></user></users>

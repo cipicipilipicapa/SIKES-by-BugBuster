@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><riwayats>
+    <user username="hakim">
+        <riwayat berat="64" golongan="" gula="140" tanggal="18/07/2025" tekanan="120" tinggi="174" usia=""/>
+    </user>
+    
+    <user username="Janu">
+        <riwayat berat="83" golongan="" gula="200" tanggal="18/07/2025" tekanan="80/120" tinggi="182" usia=""/>
+        <riwayat berat="83" golongan="" gula="170" tanggal="18/07/2025" tekanan="80/120" tinggi="182" usia=""/>
+    </user>
+    
+<user username="Luqman"><riwayat berat="65" golongan="" gula="190" tanggal="21/07/2025" tekanan="150" tinggi="178" usia=""/><riwayat berat="65" golongan="" gula="170" tanggal="21/07/2025" tekanan="140" tinggi="178" usia=""/><riwayat berat="65" golongan="" gula="150" tanggal="21/07/2025" tekanan="120" tinggi="178" usia=""/><riwayat berat="65" golongan="" gula="120" tanggal="21/07/2025" tekanan="120" tinggi="178" usia=""/></user><user username="PaijoAsik"><riwayat berat="70" golongan="" gula="140" tanggal="18/07/2025" tekanan="80/120" tinggi="174" usia=""/><riwayat berat="70" golongan="" gula="180" tanggal="18/07/2025" tekanan="80/120" tinggi="174" usia=""/><riwayat berat="69" golongan="" gula="170" tanggal="18/07/2025" tekanan="80/120" tinggi="174" usia=""/><riwayat berat="70" golongan="" gula="100" tanggal="21/07/2025" tekanan="70/120" tinggi="174" usia=""/></user></riwayats>
